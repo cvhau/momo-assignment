@@ -1,10 +1,15 @@
 package com.cvhau.assignment.model;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
-public class Bill {
-    private final long id;
+public class Bill implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -8541844534789805642L;
+
+    private final Long id;
     private final BillType type;
     private final BigDecimal amount;
     private final OffsetDateTime dueDate;
@@ -12,7 +17,7 @@ public class Bill {
     private final Account account;
     private final Provider provider;
 
-    public Bill(long id,
+    public Bill(Long id,
                 BillType type,
                 BigDecimal amount,
                 OffsetDateTime dueDate,
@@ -28,7 +33,7 @@ public class Bill {
         this.provider = provider;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

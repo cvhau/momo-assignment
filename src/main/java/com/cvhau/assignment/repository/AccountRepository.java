@@ -1,4 +1,6 @@
 package com.cvhau.assignment.repository;
 
-public interface AccountRepository {
+import com.cvhau.assignment.model.Account;
+
+public interface AccountRepository extends Repository<Account, Long> {
 }

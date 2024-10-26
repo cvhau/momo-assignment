@@ -1,11 +1,14 @@
 package com.cvhau.assignment.repository;
 
+import java.util.Collection;
 import java.util.Optional;
 
 public interface Repository<T, ID> {
-    <S extends T> S save(S entity);
+    T save(T entity);
+
+    Collection<T> saveAll(Collection<T> entities);
 
     Optional<T> findById(ID id);
 
-    Iterable<T> findAllById(Iterable<ID> ids);
+    Collection<T> findAllById(Iterable<ID> ids);
 }

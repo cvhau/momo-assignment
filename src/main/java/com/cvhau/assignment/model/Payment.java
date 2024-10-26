@@ -1,21 +1,32 @@
 package com.cvhau.assignment.model;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.time.OffsetDateTime;
 
-public class Payment {
-    private final long id;
+public class Payment implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -4868717116859035195L;
+
+    private final Long id;
     private final OffsetDateTime paymentDate;
     private PaymentState state;
     private final Bill bill;
+    private final Account account;
 
-    public Payment(long id, OffsetDateTime paymentDate, PaymentState state, Bill bill) {
+    public Payment(Long id,
+                   OffsetDateTime paymentDate,
+                   PaymentState state,
+                   Bill bill,
+                   Account account) {
         this.id = id;
         this.paymentDate = paymentDate;
         this.state = state;
         this.bill = bill;
+        this.account = account;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -33,5 +44,9 @@ public class Payment {
 
     public Bill getBill() {
         return bill;
+    }
+
+    public Account getAccount() {
+        return account;
     }
 }

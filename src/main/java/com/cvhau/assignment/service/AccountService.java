@@ -8,7 +8,7 @@ public interface AccountService {
     /**
      * Create an account.
      * @param name Account name to create.
-     * @param amount Default balance in the account.
+     * @param amount Balance in the account.
      * @return Created {@link Account} object.
      */
     Account createAccount(String name, BigDecimal amount);

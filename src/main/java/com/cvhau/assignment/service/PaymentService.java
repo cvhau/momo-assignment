@@ -10,7 +10,7 @@ import java.util.Collection;
 public interface PaymentService {
 
     /**
-     * TODO Add account reference into Payment model to avoid filter over bill state while querying.
+     * Get all payments by given account.
      *
      * @param account Given account to retrieve the payments.
      * @return A collection of {@link Payment} objects.
@@ -41,16 +41,16 @@ public interface PaymentService {
      *
      * @param bill The bill to schedule
      * @return Return a {@link Payment} result object.
-     * @throws PaymentException If the current bill is invalid or current account hasn't enough fund to pay.
+     * @throws PaymentException If the current bill is invalid.
      */
     Payment schedule(Bill bill) throws PaymentException;
 
     /**
      * User can schedule many payments for a collection of valid bills.
      *
-     * @param bills
-     * @return
-     * @throws PaymentException
+     * @param bills A collection of bills to schedule.
+     * @return A collection of scheduled {@link Payment}s objects.
+     * @throws PaymentException If any bill is invalid.
      */
     Collection<Payment> schedule(Collection<Bill> bills) throws PaymentException;
 }

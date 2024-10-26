@@ -1,15 +1,21 @@
 package com.cvhau.assignment.model;
 
-public class Provider {
-    private final long id;
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Provider implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 3898856095603227006L;
+
+    private final Long id;
     private final String name;
 
-    public Provider(long id, String name) {
+    public Provider(Long id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
