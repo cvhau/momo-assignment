@@ -1,4 +1,6 @@
 package com.cvhau.assignment.repository;
 
-public interface PaymentRepository {
+import com.cvhau.assignment.entity.Payment;
+
+public interface PaymentRepository extends Repository<Payment, Long> {
 }

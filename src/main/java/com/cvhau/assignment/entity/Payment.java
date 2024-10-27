@@ -1,14 +1,14 @@
-package com.cvhau.assignment.model;
+package com.cvhau.assignment.entity;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
 
-public class Payment implements Serializable {
+public class Payment implements Entity<Long>, Serializable {
     @Serial
     private static final long serialVersionUID = -4868717116859035195L;
 
-    private final Long id;
+    private Long id;
     private final OffsetDateTime paymentDate;
     private PaymentState state;
     private final Bill bill;
@@ -26,8 +26,14 @@ public class Payment implements Serializable {
         this.account = account;
     }
 
+    @Override
     public Long getId() {
         return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public OffsetDateTime getPaymentDate() {

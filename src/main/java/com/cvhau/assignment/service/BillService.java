@@ -1,6 +1,6 @@
 package com.cvhau.assignment.service;
 
-import com.cvhau.assignment.model.*;
+import com.cvhau.assignment.entity.*;
 
 import java.math.BigDecimal;
 import java.util.Collection;

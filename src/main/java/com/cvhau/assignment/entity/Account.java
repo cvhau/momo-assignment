@@ -1,10 +1,10 @@
-package com.cvhau.assignment.model;
+package com.cvhau.assignment.entity;
 
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Account implements Serializable {
+public class Account implements Entity<Long>, Serializable {
     @Serial
     private static final long serialVersionUID = -331708650506603446L;
 
@@ -12,10 +12,12 @@ public class Account implements Serializable {
     private String name;
     private BigDecimal balance;
 
+    @Override
     public Long getId() {
         return id;
     }
 
+    @Override
     public void setId(Long id) {
         this.id = id;
     }

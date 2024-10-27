@@ -1,8 +1,6 @@
 package com.cvhau.assignment.service;
 
-import com.cvhau.assignment.model.Provider;
-
-import java.util.Optional;
+import com.cvhau.assignment.entity.Provider;
 
 public interface ProviderService {
     /**

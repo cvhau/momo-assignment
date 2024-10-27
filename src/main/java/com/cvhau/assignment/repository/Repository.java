@@ -10,5 +10,5 @@ public interface Repository<T, ID> {
 
     Optional<T> findById(ID id);
 
-    Collection<T> findAllById(Iterable<ID> ids);
+    Collection<T> findAllById(Collection<ID> ids);
 }

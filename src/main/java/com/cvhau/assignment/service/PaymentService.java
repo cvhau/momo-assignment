@@ -1,9 +1,9 @@
 package com.cvhau.assignment.service;
 
 import com.cvhau.assignment.exception.PaymentException;
-import com.cvhau.assignment.model.Account;
-import com.cvhau.assignment.model.Bill;
-import com.cvhau.assignment.model.Payment;
+import com.cvhau.assignment.entity.Account;
+import com.cvhau.assignment.entity.Bill;
+import com.cvhau.assignment.entity.Payment;
 
 import java.util.Collection;
 

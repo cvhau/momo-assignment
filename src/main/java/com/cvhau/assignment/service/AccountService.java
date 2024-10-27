@@ -1,6 +1,6 @@
 package com.cvhau.assignment.service;
 
-import com.cvhau.assignment.model.Account;
+import com.cvhau.assignment.entity.Account;
 
 import java.math.BigDecimal;
 
