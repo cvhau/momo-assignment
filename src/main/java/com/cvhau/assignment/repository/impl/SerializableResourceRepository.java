@@ -167,7 +167,7 @@ public abstract class SerializableResourceRepository<T extends Entity<ID>, ID ex
         _entities.forEach(entity -> save(entity, false));
         // Commit all changed data after all.
         commitData();
-        return List.of();
+        return _entities;
     }
 
     @Override
