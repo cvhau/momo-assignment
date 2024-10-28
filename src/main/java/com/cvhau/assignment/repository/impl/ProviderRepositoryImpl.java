@@ -6,11 +6,6 @@ import com.cvhau.assignment.repository.ProviderRepository;
 public class ProviderRepositoryImpl extends SerializableResourceRepository<Provider, Long>
         implements ProviderRepository {
 
-    public ProviderRepositoryImpl() {
-        super();
-        loadData();
-    }
-
     @Override
     public String resourceFilename() {
         return "data/providers.dat";

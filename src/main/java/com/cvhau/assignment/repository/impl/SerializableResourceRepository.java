@@ -16,7 +16,14 @@ public abstract class SerializableResourceRepository<T extends Entity<ID>, ID ex
     protected final TreeMap<ID, T> data;
 
     public SerializableResourceRepository() {
+        this(true);
+    }
+
+    public SerializableResourceRepository(boolean forceLoadData) {
         this.data = new TreeMap<>();
+        if (forceLoadData) {
+            loadData();
+        }
     }
 
     public Map<ID, T> getData() {

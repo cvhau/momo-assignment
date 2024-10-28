@@ -5,11 +5,6 @@ import com.cvhau.assignment.repository.BillRepository;
 
 public class BillRepositoryImpl extends SerializableResourceRepository<Bill, Long> implements BillRepository {
 
-    public BillRepositoryImpl() {
-        super();
-        loadData();
-    }
-
     @Override
     public String resourceFilename() {
         return "data/bills.dat";

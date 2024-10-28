@@ -185,6 +185,10 @@ class SerializableResourceRepositoryTest {
 
     public static class TestSerializableResourceRepository extends SerializableResourceRepository<TestEntity, Long> {
 
+        public TestSerializableResourceRepository() {
+            super(false);
+        }
+
         @Override
         public String resourceFilename() {
             return "data/repository.dat";

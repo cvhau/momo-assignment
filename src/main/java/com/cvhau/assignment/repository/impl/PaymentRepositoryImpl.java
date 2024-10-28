@@ -5,11 +5,6 @@ import com.cvhau.assignment.repository.PaymentRepository;
 
 public class PaymentRepositoryImpl extends SerializableResourceRepository<Payment, Long> implements PaymentRepository {
 
-    public PaymentRepositoryImpl() {
-        super();
-        loadData();
-    }
-
     @Override
     public String resourceFilename() {
         return "data/payments.dat";
